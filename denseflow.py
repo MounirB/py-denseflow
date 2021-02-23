@@ -91,7 +91,7 @@ def dense_flow(augs):
         if flow_quantity == 0:
             step = 1
         elif flow_quantity > 1 and flow_quantity <= len_frame:
-            step = int(np.ceil(len_frame/flow_quantity))
+            step = len_frame//flow_quantity
     except:
         print('{} flow quanity is erroneous '.format(flow_quantity))
         return 0
